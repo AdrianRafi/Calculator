@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="bodyPart">
+        <h1>Calculator</h1>
+        <input class="input" type="text" readonly placeholder="=">
+
+        <div class="btn">
+
+            <button class="btnColorW" onclick="amount = ''; calculator();">C</button>
+            <button class="btnColorW" onclick="amount += '%'; calculator();">%</button>
+            <button class="btnColorW" onclick="amount += '/'; calculator();">÷</button>
+            <button class="btnColor" onclick="amount = '© Adrian Rafi'; calculator()">©</button>
+            <br>
+
+            <button onclick="amount += '7'; calculator();">7</button>
+            <button onclick="amount += '8'; calculator();">8</button>
+            <button onclick="amount += '9'; calculator();">9</button>
+            <button class="btnColor" onclick="amount += '*'; calculator();">x</button>
+            <br>
+
+            <button onclick="amount += '4'; calculator();">4</button>
+            <button onclick="amount += '5'; calculator();">5</button>
+            <button onclick="amount += '6'; calculator();">6</button>
+            <button class="btnColor" onclick="amount += '-'; calculator();">-</button>
+            <br>
+
+            <button onclick="amount += '1'; calculator();">1</button>
+            <button onclick="amount += '2'; calculator();">2</button>
+            <button onclick="amount += '3'; calculator();">3</button>
+            <button class="btnColor" onclick="amount += '+'; calculator();">+</button>
+            <br>
+
+            <button onclick="amount += '00'; calculator();">00</button>
+            <button onclick="amount += '0'; calculator();">0</button>
+            <button onclick="amount += '.'; calculator();">.</button>
+            
+            <button class="btnColor" onclick=" document.querySelector('.input').value = eval(amount);">=</button>
+        </div>
+
+    </div>
+    <script src="calculator.js"></script>
+</body>
+
+</html>
